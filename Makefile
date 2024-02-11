@@ -31,7 +31,7 @@ build/%.html: $(SRC)/%.html $(SRC)/%.env $(addprefix $(TMPL)/,$(addsuffix .html,
 	mkdir -p build
 	SITE_TITLE="$(SITE_TITLE)"; \
 	export SITE_TITLE; \
-	export $(shell grep -v '^#' $(SRC)/$*.env | xargs -d '\n'); \
+	export $(shell grep -v '^#' $(SRC)/$*.env | tr '\n' '\0' | xargs -0); \
 	KEYWORDS="$(KEYWORDS_BASE), $$KEYWORDS"; \
 	export KEYWORDS; \
 	SUBTITLE="$(SUBTITLE)"; \
