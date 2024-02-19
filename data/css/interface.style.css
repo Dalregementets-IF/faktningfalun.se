@@ -219,7 +219,7 @@ pre,
 code,
 kbd {
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	background-color: antiquewhite;
+	background-color: rgba(254, 205, 81, 0.3);
 }
 abbr,
 acronym,
@@ -264,7 +264,7 @@ blockquote {
 	border-radius: 5px;
 	border-style: solid;
 	border-width: 0 0 0 4px;
-	border-color: #e97d20;
+	border-color: #fecd51;
 }
 blockquote em,
 blockquote i,
@@ -492,7 +492,7 @@ div.paintoverlay > img:first-of-Type + img {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	background-color: #e97d20;
+	background-color: #2563aa;
 	-ms-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
 	-webkit-transition: all 0.3s ease-out;
@@ -525,7 +525,7 @@ details {
 	border: 1px solid;
 	border-radius: 5px;
 	padding: 3px;
-	background-color: seashell;
+	background-color: rgba(254, 205, 81, 0.3);
 }
 details + details {
 	margin-top: 7px;
@@ -762,7 +762,7 @@ details > math {
 #access ul li ul {
 	position: absolute;
 	background-color: #fff;
-	border-top: 4px solid #E97D20;
+	border-top: 4px solid #fecd51;
 	top: 100px;
 	left: 0;
 	width: 190px;
@@ -1119,7 +1119,7 @@ details > math {
 	border-radius: 5px;
 	border-style: solid;
 	border-width: 0 0 0 4px;
-	border-color: #e97d20;
+	border-color: #fecd51;
 	box-sizing: border-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1390,7 +1390,7 @@ details > math {
 .tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
 .tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
 	border-bottom-color: #fff;
-	border-top-color: #e97d20;
+	border-top-color: #fecd51;
 	background: #fff;
 	color: #222;
 }
