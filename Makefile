@@ -22,7 +22,7 @@ build: $(patsubst $(SRC)/%.html,build/%.html,$(PAGES)) \
 	$(patsubst $(IMG)/%.png,build/img/%.png,$(IMAGES))
 
 deploy: build
-	rsync -rLtvz $(SITE_RSYNC_OPTS) build/ data/ $(SITE_REMOTE)
+	rsync -rLvzc $(SITE_RSYNC_OPTS) build/ data/ $(SITE_REMOTE)
 
 clean:
 	rm -rf build
