@@ -19,7 +19,8 @@ help:
 	$(info make build|deploy|clean)
 
 build: $(patsubst $(SRC)/%.html,build/%.html,$(PAGES)) \
-	$(patsubst $(IMG)/%.png,build/img/%.png,$(IMAGES))
+	$(patsubst $(IMG)/%.png,build/img/%.png,$(IMAGES)) \
+	build/js/calendar.js
 
 deploy: build
 	rsync -rLvzc $(SITE_RSYNC_OPTS) build/ data/ $(SITE_REMOTE)
@@ -52,3 +53,6 @@ build/img/%.png: $(IMG)/%.png
 	mkdir -p build/img
 	cp $(IMG)/$(@F) $@; \
 	sh webp.sh $@; \
+
+build/js/calendar.js: data/js/buildcalendar.js
+	sh calendar.sh; \
