@@ -1,32 +1,12 @@
 <div id="primary">
   <div class="entry-content clearfix">
-    <!-- INOSYNC BEGIN -->
-    <!-- INOSYNC END -->
-    <div class="column clearfix">
-      <div class="one-half">
-        <h2 id="traningstider">Träningstider</h2>
-
-        <dl>
-          <dt>Barngruppen:</dt>
-          <dd>
-            Måndagar kl 17:00-18:30.<br>
-          </dd>
-          <dt>Övriga:</dt>
-          <dd>
-            Måndagar kl 17:00-18.30.<br>
-            Fredagar kl 17:00-18:30.
-          </dd>
-        </dl>
-      </div>
-      <div class="one-half">
-        <h2 id="termin">Termin 2024</h2>
-        <p>Barngruppen: Januari 8 - Juni 10</p>
-        <p>Övriga: Januari 8 - Juni 14</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry-content clearfix">
+    <h2 id="kalender">Kalender</h2>
+    <dialog id="calendar-modal">
+      <h3></h3>
+      <p></p>
+      <button autofocus>Stäng</button>
+    </dialog>
+    <div id="calendar"></div>
     <h2 id="medlemsavgift">Medlems- och träningsavgift</h2>
     <p>
       Som vanlig medlem betalas en medlemsavgift för året samt en träningsavgift per termin:
@@ -134,3 +114,6 @@
 <div id="secondary">
     <!-- SIDEIMAGE -->
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/js/calendar.min.js" type="text/javascript"></script>
+<script>buildCalendar("/faktning.ics")</script>
