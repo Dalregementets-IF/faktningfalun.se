@@ -11,6 +11,9 @@ case "$bn" in
   cwebp -q 80 -o "${bn}-300x104.webp" -resize 300 104 "$1"
   cwebp -q 80 -o "${bn}-474x342.webp" -resize 474 342 -crop 373 0 693 500 "$1"
   ;;
+*logo*)
+  cwebp -q 80 -o "${bn}-100.webp" -resize 100 0 "$1"
+  ;;
 *side*)
   cwebp -q 80 -o "${bn}-200x413.webp" -resize 200 413 "$1"
   ;;
