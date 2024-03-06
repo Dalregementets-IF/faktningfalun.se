@@ -9,8 +9,10 @@ function pad(val) {
 function buildCalendar(dlpath) {
 	document.addEventListener('DOMContentLoaded', () => {
 		const dialog = document.querySelector('#calendar-modal')
-		const dialogTitle = document.querySelector('#calendar-modal h3')
-		const dialogTime = document.querySelector('#calendar-modal p')
+		const dialogTitle = document.querySelector('#calendar-modal-title')
+		const dialogDate = document.querySelector('#calendar-modal-date')
+		const dialogPlace = document.querySelector('#calendar-modal-location')
+		const dialogDesc = document.querySelector('#calendar-modal-description')
 		document.querySelector('#calendar-modal button').addEventListener('click', () => {dialog.close()})
 		const cal = new FullCalendar.Calendar(document.getElementById('calendar'), {
 			headerToolbar: {
@@ -42,7 +44,9 @@ function buildCalendar(dlpath) {
 					}
 				}
 				dialogTitle.innerText = info.event.title
-				dialogTime.innerText = time
+				dialogDate.innerText = time
+				dialogPlace.innerText = info.event.extendedProps.location
+				dialogDesc.innerText = info.event.extendedProps.description
 				dialog.showModal()
 			},
 		})
@@ -56,6 +60,8 @@ function buildCalendar(dlpath) {
 					var res = {
 						'title': item.getFirstPropertyValue('summary'),
 						'location': item.getFirstPropertyValue('location'),
+						'description': item.getFirstPropertyValue('description'),
+						'categories': item.getFirstPropertyValue('categories'),
 					};
 					var rrule = item.getFirstPropertyValue('rrule')
 					if (rrule != null) {
@@ -72,6 +78,14 @@ function buildCalendar(dlpath) {
 						var startdate = new Date(dtstart)
 						var enddate = new Date(dtend)
 						res.duration = enddate - startdate
+						//exclusions
+						var exdate = item.getAllProperties('exdate')
+						if (exdate != null) {
+							res.exdate = []
+							for (i = 0; i < exdate.length; i++) {
+								res.exdate.push(exdate[i].getFirstValue())
+							}
+						}
 					} else {
 						if (item.hasProperty('dtstart') && item.hasProperty('dtend')) {
 							res.start = item.getFirstPropertyValue('dtstart').toString()
