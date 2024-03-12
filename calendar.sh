@@ -27,6 +27,7 @@ unzip -o "${fcout}" \
     fullcalendar-${fcver}/packages/daygrid/index.global.min.js \
     fullcalendar-${fcver}/packages/list/index.global.min.js \
     fullcalendar-${fcver}/packages/rrule/index.global.min.js \
+    fullcalendar-${fcver}/packages/luxon3/index.global.min.js \
     -d "${wdir}"
 cat "${icout}" \
     ${rrout} \
@@ -35,5 +36,6 @@ cat "${icout}" \
     ${fcdir}/packages/daygrid/index.global.min.js \
     ${fcdir}/packages/list/index.global.min.js \
     ${fcdir}/packages/rrule/index.global.min.js \
+    ${fcdir}/packages/luxon3/index.global.min.js \
     data/js/buildcalendar.js \
     > data/js/calendar.min.js

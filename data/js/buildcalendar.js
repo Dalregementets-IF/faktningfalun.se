@@ -71,15 +71,15 @@ function buildCalendar(dlpath) {
 						if (rrule.parts.BYDAY) res.rrule.byweekday = rrule.parts.BYDAY
 						if (rrule.until) res.rrule.until = rrule.until.toString()
 						if (rrule.interval) res.rrule.interval = rrule.interval
-						var dtstart = item.getFirstPropertyValue('dtstart').toString()
-						var dtend = item.getFirstPropertyValue('dtend').toString()
-						res.rrule.dtstart = dtstart
+						let tzs = item.getFirstProperty('dtstart').getParameter('tzid')
+						let tze = item.getFirstProperty('dtend').getParameter('tzid')
+						let dtstart = new luxon.DateTime.fromFormat(item.getFirstPropertyValue('dtstart').toString(), "yyyy-MM-dd'T'HH:mm:ss", {zone: tzs})
+						let dtend = new luxon.DateTime.fromFormat(item.getFirstPropertyValue('dtend').toString(), "yyyy-MM-dd'T'HH:mm:ss", {zone: tze})
+						res.rrule.dtstart = dtstart.toFormat("yyyy-MM-dd'T'HH:mm:ssZZZ")
 						//count duration ms
-						var startdate = new Date(dtstart)
-						var enddate = new Date(dtend)
-						res.duration = enddate - startdate
+						res.duration = dtend.diff(dtstart).toMillis()
 						//exclusions
-						var exdate = item.getAllProperties('exdate')
+						let exdate = item.getAllProperties('exdate')
 						if (exdate != null) {
 							res.exdate = []
 							for (i = 0; i < exdate.length; i++) {
