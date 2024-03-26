@@ -891,9 +891,6 @@ details > math {
 #content ol {
 	list-style-type: decimal;
 }
-#content ol {
-	list-style: upper-alpha outside none;
-}
 #content ol ol {
 	list-style: upper-alpha;
 }
@@ -908,9 +905,6 @@ details > math {
 #content ul ol,
 #content ol ul {
 	margin-bottom: 0;
-}
-#content .list-numeric {
-	list-style: numerical;
 }
 #content .video-container {
 	position: relative;
@@ -954,6 +948,55 @@ details > math {
 }
 #content table.striped tr:nth-child(odd) {
 	background: rgba(144, 144, 144, 0.075);
+}
+
+/* List Styles */
+#content ol.list-alpha {
+	list-style: upper-alpha;
+}
+#content ol.list-alpha ol {
+	list-style: lower-alpha;
+}
+#content ol.list-alpha ol ol {
+	list-style: lower-greek;
+}
+#content ol.list-numeric {
+	list-style: decimal;
+}
+#content ol.list-numeric ol {
+	list-style: upper-roman;
+}
+#content ol.list-numeric ol ol {
+	list-style: lower-roman;
+}
+#content ol.list-numbered-sections,
+#content ol.list-numbered-sections ol {
+	list-style-type: none;
+	counter-reset: item;
+	margin: 0;
+	padding: 0;
+}
+#content ol.list-numbered-sections {
+	margin: 0 0 20px 17px;
+}
+#content ol.list-numbered-sections > li,
+#content ol.list-numbered-sections ol > li {
+	display: table;
+	counter-increment: item;
+}
+#content ol.list-numbered-sections > li:before,
+#content ol.list-numbered-sections ol > li:before {
+	content: counters(item, ".") ". ";
+	display: table-cell;
+	padding-right: 0.6em;
+}
+#content li ol.list-numbered-sections > li,
+#content li ol.list-numbered-sections ol > li {
+	margin: 0;
+}
+#content li ol.list-numbered-sections > li:before,
+#content li ol.list-numbered-sections ol > li:before {
+	content: counters(item, ".") " ";
 }
 
 /* Entry Content */
