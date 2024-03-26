@@ -28,6 +28,7 @@ function buildCalendar(dlpath) {
 			},
 			initialView: 'dayGridMonth',
 			weekNumbers: true,
+			timeZone: 'UTC',
 			locale: 'sv',
 			eventClick: (info) => {
 				let startDate = cal.formatDate(info.event.start, {})
@@ -35,12 +36,12 @@ function buildCalendar(dlpath) {
 				if (info.event.allDay) {
 					time += 'Hela dagen'
 				} else {
-					time += pad(info.event.start.getHours()) + ':' + pad(info.event.start.getMinutes())
+					time += pad(info.event.start.getUTCHours()) + ':' + pad(info.event.start.getUTCMinutes())
 					if (info.event.end !== null) {
 					  let endDate = cal.formatDate(info.event.end, {})
 						time += '\u{2013}'
 						if (startDate !== endDate) time += endDate + ' '
-					  time += pad(info.event.end.getHours()) + ':' + pad(info.event.end.getMinutes())
+					  time += pad(info.event.end.getUTCHours()) + ':' + pad(info.event.end.getUTCMinutes())
 					}
 				}
 				dialogTitle.innerText = info.event.title
@@ -71,19 +72,17 @@ function buildCalendar(dlpath) {
 						if (rrule.parts.BYDAY) res.rrule.byweekday = rrule.parts.BYDAY
 						if (rrule.until) res.rrule.until = rrule.until.toString()
 						if (rrule.interval) res.rrule.interval = rrule.interval
-						let tzs = item.getFirstProperty('dtstart').getParameter('tzid')
-						let tze = item.getFirstProperty('dtend').getParameter('tzid')
-						let dtstart = new luxon.DateTime.fromFormat(item.getFirstPropertyValue('dtstart').toString(), "yyyy-MM-dd'T'HH:mm:ss", {zone: tzs})
-						let dtend = new luxon.DateTime.fromFormat(item.getFirstPropertyValue('dtend').toString(), "yyyy-MM-dd'T'HH:mm:ss", {zone: tze})
-						res.rrule.dtstart = dtstart.toFormat("yyyy-MM-dd'T'HH:mm:ssZZZ")
+						res.rrule.dtstart = item.getFirstPropertyValue('dtstart').toString()
 						//count duration ms
-						res.duration = dtend.diff(dtstart).toMillis()
+						let ds = new Date(res.rrule.dtstart)
+						let de = new Date(item.getFirstPropertyValue('dtend').toString())
+						res.duration = de - ds
 						//exclusions
 						let exdate = item.getAllProperties('exdate')
-						if (exdate != null) {
+						if (exdate.length > 0) {
 							res.exdate = []
 							for (i = 0; i < exdate.length; i++) {
-								res.exdate.push(exdate[i].getFirstValue())
+								res.exdate.push(exdate[i].getFirstValue().toString())
 							}
 						}
 					} else {
