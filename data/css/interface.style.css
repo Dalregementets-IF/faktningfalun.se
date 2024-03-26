@@ -272,7 +272,7 @@ blockquote cite {
 	font-style: normal;
 }
 blockquote cite {
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
@@ -559,16 +559,16 @@ details > math {
 	background-color: rgb(217,237,247);
 }
 .alert.warning .inner {
-  border: 1px solid rgb(238,211,215);
-  background-color: rgb(242,222,222);
+	border: 1px solid rgb(238,211,215);
+	background-color: rgb(242,222,222);
 }
 .alert.green .inner {
-  border: 1px solid rgb(214,233,198);
-  background-color: rgb(223,240,216);
+	border: 1px solid rgb(214,233,198);
+	background-color: rgb(223,240,216);
 }
 .alert.yellow .inner {
-  border: 1px solid rgb(251,238,213);
-  background-color: rgb(252,248,227);
+	border: 1px solid rgb(251,238,213);
+	background-color: rgb(252,248,227);
 }
 
 /* =Header
@@ -1114,7 +1114,7 @@ details > math {
 /* =Widgets
 ----------------------------------------------- */
 .widget {
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 .widget ul li a {
 	color: #777;
@@ -1264,6 +1264,13 @@ details > math {
 	padding: 4px 0 6px 10px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	display: block;
+}
+#colophon .widget_text ul.list {
+	margin-left: 15px;
+	list-style-type: disc;
+}
+#colophon .widget_text ul.list a {
+	color: #E97D20;
 }
 #colophon .widget_nav_menu ul ul li a {
 	padding-left: 20px;
