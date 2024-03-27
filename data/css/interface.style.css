@@ -936,18 +936,22 @@ details > math {
 	background-color: #f2f2f2;
 }
 
-#content table.striped {
+/*  */
+#content table {
 	border-collapse: collapse;
 }
-#content table.striped tr {
+#content table tr {
 	border: solid 1px #c9c9c9;
 }
-#content table.striped tr th,
-#content table.striped tr td {
+#content table tr th,
+#content table tr td {
 	border: 0;
 }
-#content table.striped tr:nth-child(odd) {
+#content table tr:nth-child(odd) {
 	background: rgba(144, 144, 144, 0.075);
+}
+#content table thead tr:first-child {
+	background: rgba(0, 0, 0, 0.1);
 }
 
 /* List Styles */
@@ -1470,48 +1474,56 @@ img.error-shield {
 
 /* Calendar
 ----------------------------------------------- */
-#calendar {
+#content #calendar {
 	border-top: 4px solid #FECD51;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
 	margin-bottom: 20px;
 }
-#calendar a {
+#content #calendar a {
 	color: #000;
 }
-#calendar td {
+#content #calendar tr {
+	background: none;
+}
+#content #calendar .fc-scrollgrid-section table {
+	border-style: hidden;
+}
+#content #calendar tr th,
+#content #calendar td {
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0;
 }
-#calendar table {
+#content #calendar table {
 	margin-bottom: 0;
 }
-#calendar .fc-button-primary {
+#content #calendar .fc-button-primary {
 	background-color: #2563aa;
 	border-color: rgba(0,0,0,0.1);
 }
-#calendar .fc-button-primary[aria-pressed="true"] {
+#content #calendar .fc-button-primary[aria-pressed="true"] {
 	background-color: #0c4a91;
 }
-#calendar .fc-list-table td {
+#content #calendar .fc-list-table td {
 	padding: 8px 14px;
 }
-#calendar .fc-day-today {
+#content #calendar .fc-day-today {
 	background-color: rgba(254, 205, 81, 0.3);
 }
-#calendar .fc-footer-toolbar {
+#content #calendar .fc-footer-toolbar {
 	margin-top: 0;
 	border-left: 1px solid var(--fc-border-color);
 	border-right: 1px solid var(--fc-border-color);
 }
-#calendar .fc-footer-toolbar .fc-toolbar-chunk {
+#content #calendar .fc-footer-toolbar .fc-toolbar-chunk {
 	margin: 1em;
 }
-#calendar-modal {
+#content #calendar-modal {
 	min-width: 300px;
 	border: 1px solid var(--fc-border-color);
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
 	border-radius: 5px;
 }
-#calendar-modal button {
+#content #calendar-modal button {
 	display: block;
 	margin: 0 auto;
 	background-color: #2563aa;
@@ -1521,7 +1533,7 @@ img.error-shield {
 	padding: 0.4em 0.65em;
 	font-family: inherit;
 }
-#calendar-modal h3 {
+#content #calendar-modal h3 {
 	border-bottom: 3px solid #FECD51;
 	margin-bottom: 10px;
 }
