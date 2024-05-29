@@ -47,7 +47,7 @@ function buildCalendar(dlpath) {
 				dialogTitle.innerText = info.event.title
 				dialogDate.innerText = time
 				dialogPlace.innerText = info.event.extendedProps.location
-				dialogDesc.innerText = info.event.extendedProps.description
+				dialogDesc.innerHTML = info.event.extendedProps.description
 				dialog.showModal()
 			},
 		})
