@@ -70,7 +70,7 @@ function buildCalendar(dlpath) {
 						res.rrule = {}
 						if (rrule.freq) res.rrule.freq = rrule.freq
 						if (rrule.parts.BYDAY) res.rrule.byweekday = rrule.parts.BYDAY
-						if (rrule.until) res.rrule.until = rrule.until.toString()
+						if (rrule.until) res.rrule.until = rrule.until.toString().substring(0,11) + '23:59:59' // ugly hack to work around Z timezone
 						if (rrule.interval) res.rrule.interval = rrule.interval
 						res.rrule.dtstart = item.getFirstPropertyValue('dtstart').toString()
 						//count duration ms
