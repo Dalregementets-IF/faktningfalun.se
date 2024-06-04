@@ -44,7 +44,7 @@ build/%.html: $(SRC)/%.html $(SRC)/%.env $(addprefix $(TMPL)/,$(addsuffix .html,
 	rm $@.tmp1; \
 	envsubst < $< >> $@.tmp2; \
 	[ -z "$$SIDEIMAGE" ] || sed -i -e '/<!-- SIDEIMAGE -->/{r $(TMPL)/sideimage.html' -e 'd}' $@.tmp2; \
-	sed -i -e 's#<!-- PAGETITLE -->#<h1>$$PAGE_TITLE</h1>#' $@.tmp2; \
+	[ -z "$$PAGETITLE" ] || sed -i -e 's#<!-- PAGETITLE -->#<h1>$$PAGE_TITLE</h1>#' $@.tmp2; \
 	envsubst < $@.tmp2 > $@; \
 	rm $@.tmp2; \
 	envsubst < $(TMPL)/footer.html >> $@; \
