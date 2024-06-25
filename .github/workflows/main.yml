@@ -34,7 +34,7 @@ jobs:
       with:
         key: ${{ secrets.SSH_KEY }}
         name: ${{ vars.SSH_KEY_NAME }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        known_hosts: ${{ vars.KNOWN_HOSTS }}
         config: ${{ secrets.CONFIG }}
         if_key_exists: replace
 
