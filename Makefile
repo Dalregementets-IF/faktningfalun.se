@@ -1,8 +1,8 @@
 #!/usr/bin/make -f
 
 SITE_REMOTE ?= www/
-SITE_TITLE ?= Fäktning/M5K i Falun
-SUBTITLE ?= En sektion i Dalregementets IF
+export SITE_TITLE ?= Fäktning/M5K i Falun
+export SUBTITLE ?= En sektion i Dalregementets IF
 KEYWORDS_BASE ?= fäktning, M5K, modern femkamp, värja, falun
 SITE_RSYNC_OPTS ?= -O -e "ssh -i deploy_key"
 
@@ -30,13 +30,8 @@ clean:
 
 build/%.html: $(SRC)/%.html $(SRC)/%.env $(addprefix $(TMPL)/,$(addsuffix .html,header banner footer))
 	mkdir -p build
-	SITE_TITLE="$(SITE_TITLE)"; \
-	export SITE_TITLE; \
 	export $(shell grep -v '^#' $(SRC)/$*.env | tr '\n' '\0' | xargs -0); \
-	KEYWORDS="$(KEYWORDS_BASE), $$KEYWORDS"; \
-	export KEYWORDS; \
-	SUBTITLE="$(SUBTITLE)"; \
-	export SUBTITLE; \
+	export KEYWORDS="$(KEYWORDS_BASE), $$KEYWORDS"; \
 	[ -z "$$PAGE_TITLE" ] && TITLE="$(SITE_TITLE)" || TITLE="$$PAGE_TITLE · $(SITE_TITLE)"; \
 	export TITLE; \
 	[ -z "$$BANNER" ] && cp $(TMPL)/header.html $@.tmp1 || sed -e '/<!-- BANNER -->/{r $(TMPL)/banner.html' -e 'd}' $(TMPL)/header.html > $@.tmp1; \
