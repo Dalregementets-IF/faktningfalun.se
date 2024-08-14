@@ -1,3 +1,10 @@
+# vim: set ts=2 sw=2 :
+title: Felsökning
+description: Vilka problem kan du stöta på med din utrustning och vad är orsaken? Lär dig att felsöka din utrustning och hitta felen.
+keywords: felsökning, kroppskabel
+sideimages: side-felsokning
+flags: banner
+
 <div id="primary">
   <div class="entry-content clearfix">
     <p>Läs igenom <a href="varja.html">hur värjan fungerar</a> om du inte redan är bekantad med ämnet. När du känner till hur utrustningen fungerar så är det lättare att minnas de olika sätten utrustningen kan gå sönder och vilka steg du kan ta för att felsöka problem.</p>

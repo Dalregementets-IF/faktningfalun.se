@@ -1,0 +1,10 @@
+# vim: set ts=2 sw=2 :
+title: Sidan kunde inte hittas
+description:
+keywords:
+sideimages:
+flags:
+
+<div class="entry-content clearfix">
+  <img src="/img/404.webp" class="error-shield">
+</div>

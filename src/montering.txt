@@ -1,4 +1,11 @@
-<div class="entry-content clearfix step-guide">
+# vim: set ts=2 sw=2 :
+title: Montering av värja
+description: Att sätta ihop en värja är inte särskilt svårt men det finns några viktiga saker att tänka på. Se en illustrerad guide på alla steg och vad du måste se upp för.
+keywords: montering, guide, walkthrough
+sideimages: side-montering
+flags: banner
+
+<div class="step-guide">
   <ol>
     <li>
       <img loading="lazy" src="img/montering-varja-01.webp" alt="" width="400" height="300">

@@ -10,16 +10,15 @@ SITE_RSYNC_OPTS ?= -O -e "ssh -i deploy_key"
 
 SRC = src
 IMG = data/img
-TMPL = templates
+export TMPL = templates
 #PAGES = $(shell git ls-tree HEAD --name-only -- $(SRC)/*.html 2>/dev/null)
-PAGES = $(shell ls -1 -- $(SRC)/*.html 2>/dev/null)
-IMAGES = $(shell ls -1 -- $(IMG)/*.png 2>/dev/null)
+PAGES = $(shell ls -1 -- $(SRC)/*.txt 2>/dev/null)
 
 help:
 	$(info make build|deploy|clean)
 
-build: $(patsubst $(SRC)/%.html,build/%.html,$(PAGES)) \
-	$(patsubst $(IMG)/%.png,build/img/%.png,$(IMAGES)) \
+build: $(patsubst $(SRC)/%.txt,build/%.html,$(PAGES)) \
+	build/img \
 	build/js/calendar.js
 
 deploy: build
@@ -28,26 +27,11 @@ deploy: build
 clean:
 	rm -rf build
 
-build/%.html: $(SRC)/%.html $(SRC)/%.env $(addprefix $(TMPL)/,$(addsuffix .html,header banner footer))
-	mkdir -p build
-	export $(shell grep -v '^#' $(SRC)/$*.env | tr '\n' '\0' | xargs -0); \
-	export KEYWORDS="$(KEYWORDS_BASE), $$KEYWORDS"; \
-	[ -z "$$PAGE_TITLE" ] && TITLE="$(SITE_TITLE)" || TITLE="$$PAGE_TITLE · $(SITE_TITLE)"; \
-	export TITLE; \
-	[ -z "$$BANNER" ] && cp $(TMPL)/header.html $@.tmp1 || sed -e '/<!-- BANNER -->/{r $(TMPL)/banner.html' -e 'd}' $(TMPL)/header.html > $@.tmp1; \
-	envsubst < $@.tmp1 > $@.tmp2; \
-	rm $@.tmp1; \
-	envsubst < $< >> $@.tmp2; \
-	[ -z "$$SIDEIMAGE" ] || sed -i -e '/<!-- SIDEIMAGE -->/{r $(TMPL)/sideimage.html' -e 'd}' $@.tmp2; \
-	[ -z "$$PAGETITLE" ] || sed -i -e 's#<!-- PAGETITLE -->#<h1>$$PAGE_TITLE</h1>#' $@.tmp2; \
-	envsubst < $@.tmp2 > $@; \
-	rm $@.tmp2; \
-	envsubst < $(TMPL)/footer.html >> $@; \
+build/%.html: $(SRC)/%.txt $(addprefix $(TMPL)/,$(addsuffix .html,header banner footer))
+	sh build.sh "$(SRC)/$(*).txt" "$(@)"
 
-build/img/%.png: $(IMG)/%.png
-	mkdir -p build/img
-	cp $(IMG)/$(@F) $@; \
-	sh webp.sh $@; \
+build/img:
+	sh img.sh $(IMG)
 
 build/js/calendar.js: data/js/buildcalendar.js
 	sh calendar.sh; \

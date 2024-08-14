@@ -1,3 +1,10 @@
+# vim: set ts=2 sw=2 :
+title: Länkar
+description: Fäkting och M5K i Falun
+keywords:
+sideimages:
+flags: notitle banner
+
 <div id="interface_promobox_widget-2" class="widget widget_promotional_bar clearfix">
   <div class="promotional-text">Intresserad av fäktning?<span>Prova på att träna med oss eller boka eventfäktning för ditt kompisgäng, företag, etc.</span>
   </div>
