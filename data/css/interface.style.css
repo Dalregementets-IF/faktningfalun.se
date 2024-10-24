@@ -197,6 +197,10 @@ hr {
 }
 
 /* Text Elements */
+p, td, li, span {
+	letter-spacing: .02rem;
+	font-size: 120%;
+}
 p {
 	line-height: 1.6;
 	margin-bottom: 15px;
@@ -782,7 +786,7 @@ details > math {
 #access ul li.current_page_item ul li a {
 	float: none;
 	line-height: 20px;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: normal;
 	height: 100%;
 	padding: 6px 10px;
@@ -1194,7 +1198,7 @@ details > math {
 	margin-bottom: 5px;
 }
 .widget_promotional_bar .promotional-text span {
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 20px;
 	font-weight: normal;
 	text-transform: none;
