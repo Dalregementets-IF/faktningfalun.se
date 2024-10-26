@@ -51,7 +51,7 @@ if [ -n "$sideimages" ]; then
         tmp="$tmp
 <div class=\"paintoverlay\">
   <img alt=\"\" loading=\"lazy\" src=\"img/$img-200.webp\">
-  <img alt=\"\" loading=\"lazy\" src=\"img/paintsplashborder-side-200x413.webp\">
+  <img alt=\"\" loading=\"lazy\" src=\"img/paintsplashborder-side-200.webp\">
 </div>"
     done
     tmp="$tmp

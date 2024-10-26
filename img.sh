@@ -15,7 +15,7 @@ for f in $(find $1/*); do
     fi
     cwebp -q 80 -o "${destbase}.webp" $f
     case "${destbase##*/}" in
-    banner-*)
+    banner-* | *-banner)
       cwebp -q 80 -o "${destbase}-1440x500.webp" -resize 1440 500 "$f"
       cwebp -q 80 -o "${destbase}-1024x356.webp" -resize 1024 356 "$f"
       cwebp -q 80 -o "${destbase}-768x267.webp" -resize 768 267 "$f"
@@ -25,7 +25,7 @@ for f in $(find $1/*); do
     *logo*)
       cwebp -q 80 -o "${destbase}-100.webp" -resize 100 0 "$f"
       ;;
-    side-* | qr-*)
+    side-* | qr-* | *-side)
       cwebp -q 80 -o "${destbase}-200.webp" -resize 200 0 "$f"
       ;;
     *pictogram*)
