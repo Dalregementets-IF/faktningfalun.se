@@ -93,6 +93,16 @@ object {
 
 /* =Global
 ----------------------------------------------- */
+@font-face {
+  font-family: 'DIN 1451 Std';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/dinmittelschriftstd-1-opentype.woff2') format('woff2');
+  src: url('../fonts/dinmittelschriftstd-1-opentype.woff') format('woff');
+  src: url('../fonts/dinmittelschriftstd-1-opentype.eot') format('embedded-opentyp');
+  src: url('../fonts/dinmittelschriftstd-1-opentype.ttf') format('truetype');
+}
+
 body,
 input,
 textarea,
@@ -633,12 +643,13 @@ details > math {
 	margin-right: 5px;
 }
 #site-title {
+	font-family: 'DIN 1451 Std', 'PT Sans', sans-serif;
 	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: normal;
 	line-height: 35px;
 	display: inline-block;
-	margin-top: 30px;
+	margin-top: 40px;
 }
 #site-title a {
 	color: #777;
