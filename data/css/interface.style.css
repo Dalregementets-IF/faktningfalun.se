@@ -1489,6 +1489,9 @@ img.error-shield {
 
 /* Calendar
 ----------------------------------------------- */
+#content #calendar h2 {
+	text-transform: capitalize;
+}
 #content #calendar {
 	border-top: 4px solid #FECD51;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
