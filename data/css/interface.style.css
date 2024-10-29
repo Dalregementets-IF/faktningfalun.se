@@ -1511,6 +1511,12 @@ img.error-shield {
 #content #calendar table {
 	margin-bottom: 0;
 }
+#content #calendar button {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .02rem;
+}
+
 #content #calendar .fc-button-primary {
 	background-color: #2563aa;
 	border-color: rgba(0,0,0,0.1);
@@ -1536,17 +1542,33 @@ img.error-shield {
 	min-width: 300px;
 	border: 1px solid var(--fc-border-color);
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+	max-width: 800px;
 	border-radius: 5px;
 }
 #content #calendar-modal button {
-	display: block;
+	border: none;
 	margin: 0 auto;
+	color: #fff;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	padding: 9px 20px 9px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	background-color: #2563aa;
-	border-color: rgba(0,0,0,0.1);
-	color: var(--fc-button-text-color);
-	border-radius: 0.25em;
-	padding: 0.4em 0.65em;
-	font-family: inherit;
+	-ms-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+#content #calendar-modal button:hover {
+	background-color: #777;
+	border-color: #777;
 }
 #content #calendar-modal h3 {
 	border-bottom: 3px solid #FECD51;
