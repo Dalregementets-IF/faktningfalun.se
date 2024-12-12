@@ -29,8 +29,8 @@ Den första tredjedelen av klingan efter dess tång, närmast skålen, kallas fo
 Den sista tredjedelen av klingan närmast spetsen kallas foible (svag).
 Utrymmet mellan forte och foible är klingans mitt.
 Längs ovansidan på klingan finns en skåra med textilklädda koppartrådar som sitter ihopkopplade med en kontakt inuti spetsen.</p>
-<p>Skålen skyddar fäktarens hand och används för att deflektera motståndarens värja. Inuti skålen finns skålkontakten som kopplar ihop värjan med pisten genom fäktarens kroppskabel. En skålkudde skyddar trådarna inuti skålen från fäktarens fingrar.</p>
-<p>Fäktpisten har en registreringsapparat kopplad till två sladdvindor, en för vardera fäktare. Fäktarna koppar sin kroppskabel till sladdvindan och till vapen, när varjspetsen trycks ihop sluts signalkretsen och registreringsapparaten signalerar en träff. En träff signaleras endast om värjspetsen inte har jordkontakt, vilket förhindrar att träffar registras mot motståndarens skål.</p>
+<p>Skålen skyddar fäktarens hand och används för att deflektera motståndarens värja. Inuti skålen finns skålkontakten som kopplar ihop värjan med pisten genom fäktarens kroppskabel, en kabel som förs genom jackärmen på vapenarmen och ut vid ryggslutet. En skålkudde skyddar trådarna inuti skålen från fäktarens fingrar.</p>
+<p>Fäktpisten har en registreringsapparat kopplad till två sladdvindor, en för vardera fäktare. Fäktarna kopplar sin kroppskabel till sladdvindan på sin sida pisten och till sitt vapen, när värjspetsen trycks ihop sluts signalkretsen och registreringsapparaten signalerar en träff. En träff signaleras endast om värjspetsen inte har jordkontakt, vilket förhindrar att träffar registreras mot motståndarens skål.</p>
 <p>Det finns även trådlösa registreringsapparater som ersätter sladdvinorna med sändare och mottagare. I dessa system finns inte jord utan annorlunda metoder används av registreringsutrustningen för att beräkna giltiga träffar.</p>
 <h2>Spets</h2>
 <div class="wp-caption">
