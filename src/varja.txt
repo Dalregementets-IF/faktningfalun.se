@@ -20,7 +20,7 @@ flags: banner
 </ul>
 <p>En knopp, även kallat pommel, används med kavelhandtag för att ge motvikt till klingan och samtidigt hålla ihop vapnet; ett pistolhandtag använder istället en lättare mutter, vanligtvis av typen insex.</p>
 <div class="wp-caption">
-  <img loading="lazy" src="img/varjklinga.webp" alt="värjklinga i profil">
+  <div class="img-border"><img loading="lazy" src="img/varjklinga.webp" alt="värjklinga i profil"></div>
   <p class="wp-caption-text">Värjans klinga kan delas in i foible (svag), mitt, forte (stark), och tånge.</p>
 </div>
 <p>Längst ut på klingan sitter spetsen, en flerdelad mekanism för att registrera träffar.
@@ -34,7 +34,7 @@ Längs ovansidan på klingan finns en skåra med textilklädda koppartrådar som
 <p>Det finns även trådlösa registreringsapparater som ersätter sladdvinorna med sändare och mottagare. I dessa system finns inte jord utan annorlunda metoder används av registreringsutrustningen för att beräkna giltiga träffar.</p>
 <h2>Spets</h2>
 <div class="wp-caption">
-  <img loading="lazy" src="img/varjspets.webp" alt="diagram">
+  <div class="img-border"><img loading="lazy" src="img/varjspets.webp" alt="diagram"></div>
   <p class="wp-caption-text">De olika delarna i en värjspets (brittisk Leon Paul), och hur de sitter ihop.</p>
 </div>
 <p>Bilden ovan visar alla delar i en typisk värjspets:</p>
@@ -56,7 +56,7 @@ Längs ovansidan på klingan finns en skåra med textilklädda koppartrådar som
 </ul>
 <h2 id="ledningar">Ledningar</h2>
 <div class="wp-caption">
-  <img loading="lazy" src="img/kroppskabel-varja.webp" alt="kroppskabelskontakt värja">
+ <div class="img-border"><img loading="lazy" src="img/kroppskabel-varja.webp" alt="kroppskabelskontakt värja"></div>
   <p class="wp-caption-text">De tre olika ledningarna på en kroppskabel för värja.</p>
 </div>
 <p>Värjan använder sig utav tre elektriska ledningar: A, B och C. A och B är de ledningar som går till från spetskontaktens poler, genom kroppskabeln och slutligen in i registreringsapparaten. C-ledningen är jord, och utgör hela värjan (med undantag av den allra yttersta delen av spetsen, avskild med plast). På kroppskabeln och i värjans skålkontakt är det lätt att urskilja de olika ledningarna från varandra: A och B sitter tillsammans, medan C är avskiljd.</p>

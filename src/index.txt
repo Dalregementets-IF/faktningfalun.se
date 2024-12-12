@@ -21,7 +21,7 @@ flags: notitle banner
       <a title="Utrustning" href="utrustning.html">
         <div class="paintoverlay">
           <img width="474" height="342" src="img/banner-utrustning-474x342.webp" alt="" loading="lazy">
-          <img src="img/paintsplashborder-gallery-2.webp" alt="">
+          <div class="gallery-2"></div>
         </div>
       </a>
       <h3 class="custom-gallery-title"><a href="utrustning.html" title="">Utrustning</a></h3>
@@ -31,7 +31,7 @@ flags: notitle banner
       <a title="Hur fungerar värjan?" href="varja.html">
         <div class="paintoverlay">
           <img width="474" height="342" src="img/banner-varja-474x342.webp" alt="" loading="lazy">
-          <img src="img/paintsplashborder-gallery-1.webp" alt="">
+          <div class="gallery-1"></div>
         </div>
       </a>
       <h3 class="custom-gallery-title"><a href="varja.html" title="">Hur fungerar värjan?</a></h3>
@@ -41,7 +41,7 @@ flags: notitle banner
       <a title="Länkar" href="lankar.html">
         <div class="paintoverlay">
           <img width="474" height="342" src="img/banner-lankar-474x342.webp" alt="" loading="lazy">
-          <img src="img/paintsplashborder-gallery-3.webp" alt="">
+          <div class="gallery-3"></div>
         </div>
       </a>
       <h3 class="custom-gallery-title"><a href="lankar.html" title="">Länkar</a></h3>

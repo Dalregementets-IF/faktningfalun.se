@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="$DESCRIPTION">
     <meta name="keywords" content="$KEYWORDS">
+    <meta name="color-scheme" content="dark light">
     <title>$TITLE</title>
     <!--[if IE]><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><![endif]-->
     <link rel="icon" href="favicon.png" type="image/png">
@@ -13,11 +14,17 @@
     <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=PT+Sans%3A400%2C700italic%2C700%2C400italic&#038;ver=5.6.8' type='text/css' media='all'>
   </head>
-  <body>
+<body>
 <div class="wrapper">
 <header id="branding" >
   <div class="info-bar">
     <div class="container clearfix">
+      <select id="theme-select">
+        <option name="theme" value="auto" selected>🌗 Auto</option>
+        <option name="theme" value="dark">🌑 Mörkt</option>
+        <option name="theme" value="light">🌕 Ljust</option>
+      </select>
+      <script src="/js/theme.js" type="text/javascript"></script>
       <div class="info clearfix">
         <ul><li class="address">Soldatvägen 10, Falun</li></ul>
       </div>
