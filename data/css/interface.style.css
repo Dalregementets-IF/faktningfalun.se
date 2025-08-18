@@ -1797,6 +1797,9 @@ img.error-shield {
 #content #calendar .fc-day-today a {
 	color: var(--fc-today-text-color);
 }
+#content #calendar .fc-day-today .fc-daygrid-week-number {
+	color: var(--fc-text-color);
+}
 #content #calendar .fc-day-today .fc-daygrid-event-dot {
 	border-color: var(--fc-event-border-today-color);
 }
