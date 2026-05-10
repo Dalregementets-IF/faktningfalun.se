@@ -18,7 +18,7 @@ flags: banner
     <a title="Hur fungerar värjan?" href="varja.html">
       <div class="paintoverlay">
         <img width="474" height="342" src="img/banner-varja-474x342.webp" alt="" loading="lazy">
-        <img src="img/paintsplashborder-gallery-1.webp" alt="">
+        <div class="gallery-3"></div>
       </div>
     </a>
     <h3 class="custom-gallery-title"><a href="varja.html" title="Hur fungerar värjan?">Hur fungerar värjan?</a></h3>
@@ -28,7 +28,7 @@ flags: banner
     <a title="Guide: montera värja" href="montering.html">
       <div class="paintoverlay">
         <img width="474" height="342" src="img/banner-montering-474x342.webp" alt="" loading="lazy">
-        <img src="img/paintsplashborder-gallery-1.webp" alt="">
+        <div class="gallery-1"></div>
       </div>
     </a>
     <h3 class="custom-gallery-title"><a href="montering.html" title="Guide: montera värja">Guide: montera värja</a></h3>
@@ -38,7 +38,7 @@ flags: banner
     <a title="Felsökning" href="felsokning.html">
       <div class="paintoverlay">
         <img width="474" height="342" src="img/banner-felsokning-474x342.webp" alt="" loading="lazy">
-        <img src="img/paintsplashborder-gallery-2.webp" alt="">
+        <div class="gallery-2"></div>
       </div>
     </a>
     <h3 class="custom-gallery-title"><a href="felsokning.html" title="Felsökning">Felsökning</a></h3>
