@@ -27,6 +27,9 @@ deploy: build
 clean:
 	rm -rf build
 
+clean/html:
+	find build -name *.html -delete
+
 build/%.html: $(SRC)/%.txt $(addprefix $(TMPL)/,$(addsuffix .html,header banner footer))
 	sh build.sh "$(SRC)/$(*).txt" "$(@)"
 
